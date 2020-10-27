@@ -1,0 +1,36 @@
+body {
+    font-family: Verdana;
+}
+.container {
+    margin: 10px auto 0 auto;
+    width: 100%;
+    max-width: 960px
+}
+button {
+    width:200px; 
+    height:60px;
+    background-color: #cccccc;
+    color: #333333;
+    margin: 12px;
+}
+.small-button {
+    width:120px; 
+    margin-top: 24px;
+    height: 24px;
+
+}
+h1 {
+    font-size: 22px;
+}
+select {
+    width: 300px;
+    font-size: 20px; 
+    padding: 6px;
+}
+label {
+    font-size: 14px;
+    font-weight: bold;
+    width: 200px;
+    display:inline-block;
+    margin-top: 6px;
+}

@@ -1,0 +1,7 @@
+class TemplateView {
+    
+    dataShow(data) {
+       
+    }
+
+}

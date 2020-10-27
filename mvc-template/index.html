@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MVC - Template</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/simple-helper.js"></script>
+    <script src="model/template-model.js"></script>
+    <script src="view/template-view.js"></script>
+    <script src="controller/template-controller.js"></script>
+   <script>
+
+        /*
+           I Current lagras all data, den får endast anropas direkt av 
+            Controllen eller ett Event.
+
+            Endast Controllen får anropas från ett event
+            Model och View får endast anropas från Controllen.
+            En Model får aldrig anropa en View eller tvärtom.
+            Om data behövs från Current i Model eller View, ska
+            dessa läggas som parametrar från Controllen.
+
+            jQuery får användas för Event hantering etc. Dock ej Ajax, detta ska ske
+            via Fetch.
+
+            Namnstandard är Pascal för Klasser, Camel för funktioner, variabler och parametrar.
+            Variabler och funktioer ska beskriva vad det gör, med följande indelning,
+            "CustomerListLoad", dvs. alltid object först och vad som görs sist.
+
+        */
+
+        var Current = {};
+        const Model = new TemplateModel();
+        const View = new TemplateView();
+        const Controller = new TemplateController();
+
+        document.addEventListener('DOMContentLoaded', function() {
+
+            Controller.init();
+        });
+        /*
+            Här ska alla event ligga,
+            ett event får bara sampla informatiom och sedan anrop Controllen
+        */
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div id="main-container">
+           
+        </div>
+    </div>
+</body>
+</html>
